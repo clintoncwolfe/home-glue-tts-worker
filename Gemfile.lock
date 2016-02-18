@@ -4,6 +4,7 @@ GEM
     amq-protocol (2.0.1)
     bunny (2.2.2)
       amq-protocol (>= 2.0.1)
+    recursive-open-struct (1.0.1)
     serverengine (1.5.11)
       sigdump (~> 0.2.2)
     sigdump (0.2.4)
@@ -19,6 +20,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  recursive-open-struct
   sneakers
 
 BUNDLED WITH
