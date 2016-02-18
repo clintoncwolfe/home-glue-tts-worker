@@ -8,7 +8,7 @@ def main
   bunny = connect(settings)
   ch = bunny.create_channel
   q = ch.queue("tts.utterances")
-  x = ch.default_exchange
+  x = ch.direct('tts', durable: true)
   utterances = ARGV.dup
   utterances.each { |u| x.publish(u, :routing_key => q.name) }
   bunny.close
